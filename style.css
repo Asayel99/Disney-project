@@ -54,7 +54,7 @@ body{
 
 .search-box{
     border: none;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #096197;
     background-color: transparent;
     outline: none;
     height: 30px;
@@ -165,14 +165,14 @@ body{
 .movie-title{
     padding-left: 50px;
     text-transform: capitalize;
-    margin-top: 80px; 
+    margin-top: 15px; 
 }
 
 .movie-des{
     width: 80%;
     line-height: 30px;
     padding-left: 50px;
-    margin-top: 30px;
+    margin-top: 10px;
     opacity: 0.8;
 }
 
@@ -195,11 +195,15 @@ body{
 
 .buttons{
     position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 90%;
+    top: auto;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
     display: flex;
     justify-content: space-between;
+    z-index: 1000;
+    gap: 20px;
 
 }
 
@@ -212,6 +216,11 @@ body{
     border: none;
     font-family: monospace;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    
 }
 
 .dots{

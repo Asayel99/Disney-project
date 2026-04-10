@@ -26,7 +26,7 @@ nextBtn.onclick = () => {
 
 prevBtn.onclick = () => {
     if (counter <= 0) {
-        counter = sliders.length - 1; // يذهب للنهاية
+        counter = sliders.length - 1; //  للنهاية
     } else {
         counter--;
     }
