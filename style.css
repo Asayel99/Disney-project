@@ -94,9 +94,14 @@ body{
     
 }
 
-.Frozen_2{
-    width: 300px;
-    height: 190px;
+.Frozen_2 {
+    position: absolute; /* عشان تطير خلف النص */
+    top: 0;
+    right: 0;
+    width: auto;       /* تاخذ العرض كامل */
+    height: 100%;      /* تاخذ الطول كامل */
+    object-fit: cover; /* أهم سطر: يخليها تملا المكان بدون ما تتمطط */
+    z-index: -1;       /* يخليها خلف الكلام */
 }
 
 .carousel-container{
@@ -110,12 +115,12 @@ body{
     
 }
 
-.carousel{
-    display: flex;
-    width: 92%;
+.carousel {
+    position: relative; /* ضروري عشان الصورة والنص يعرفون حدودهم */
+    width: 100%;
     height: 100%;
-    position: relative;
-    transition: 1s;
+    display: flex;
+    align-items: center; /* يخلي النص في النص عمودياً */
 }
 
 .slider {
@@ -125,6 +130,10 @@ body{
     background: rgba(0,0,0, 0.5);
     border-radius: 5px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
 }
 
 /* 4. الأزرار: تأكدي أن الـ z-index مرتفع لكي لا تختفي خلف الصور */
@@ -146,11 +155,13 @@ body{
 }
 
 .slider img{
-    width: 35%;
-    min-height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     display: block;
-    margin-left: auto;
+    margin: 0 auto;
+   
+    
 }
 
 .slider-content{
@@ -280,4 +291,52 @@ body{
     scroll-behavior: smooth; /* يجعل الحركة انسيابية وليست قفزة مفاجئة */
 }
 
+.movie-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* مسافة بين النجمة والوقت والنوع */
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #00e5ff; /* لون ديزني السماوي المميز */
+}
+
+.rating {
+    color: #ffcc00; /* لون النجمة الذهبي */
+}
+
+.duration {
+    color: #ffffff;
+}
+
+/* تنسيق الوصف المختصر */
+.movie-des {
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+    font-size: 15px;
+}
+
+/* تنسيق زر التشغيل */
+.play-btn {
+    padding: 12px 35px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #00e5ff; /* يتغير لونه عند التمرير */
+    color: #ffffff;
+    transform: scale(1.05); /* حركة تكبير بسيطة */
+}
 
