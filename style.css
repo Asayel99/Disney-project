@@ -98,7 +98,7 @@ body{
     position: absolute; /* عشان تطير خلف النص */
     top: 0;
     right: 0;
-    width: auto;       /* تاخذ العرض كامل */
+    width: 100%;       /* تاخذ العرض كامل */
     height: 100%;      /* تاخذ الطول كامل */
     object-fit: cover; /* أهم سطر: يخليها تملا المكان بدون ما تتمطط */
     z-index: -1;       /* يخليها خلف الكلام */
@@ -155,11 +155,14 @@ body{
 }
 
 .slider img{
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
-    margin: 0 auto;
+    object-position: center;
    
     
 }
