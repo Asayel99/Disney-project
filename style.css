@@ -163,6 +163,9 @@ body{
     object-fit: cover;
     display: block;
     object-position: center;
+    background-color: transparent;
+    z-index: -1;
+
    
     
 }
@@ -343,3 +346,79 @@ body{
     transform: scale(1.05); /* حركة تكبير بسيطة */
 }
 
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f1f3f5;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden; /* ليتم قص أي شيء يخرج عن الزوايا المنحنية */
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+}
+
+.card-header {
+    position: relative;
+    height: 200px;
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* هذا السطر يصنع الانحناء السفلي للصورة */
+    clip-path: ellipse(100% 85% at 50% 15%);
+}
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #a33fa1; /* لون أرجواني */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn-outline {
+    border: 2px solid #0056b3;
+    color: #0056b3;
+    background: transparent;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #0056b3;
+    color: white;
+}
+
+.cards-wrapper{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f1f3f5;
+}
+.section-header {
+    text-align: left; /*  center    */
+    padding: 20px 0; /* مسافة بسيطة فوق وتحت العنوان */
+    margin-left: 50px; /* لكي يبدأ من نفس محاذات البطاقة    */
+}
+
+.section-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* لون نص ديزني الداكن */
+    font-family: 'Arial', sans-serif; /* أو أي خط تفضلينه */
+}
