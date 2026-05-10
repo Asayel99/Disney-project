@@ -422,3 +422,29 @@ body{
     color: #333; /* لون نص ديزني الداكن */
     font-family: 'Arial', sans-serif; /* أو أي خط تفضلينه */
 }
+
+.card-body h3{
+    margin-bottom: 15px; /* مسافة بين العنوان والوصف */
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.card-body{        /*ترتيب الوصف  */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+
+.card-body p {
+    margin-bottom: 25px;
+    flex-grow: 1; /* هذا يجعل الوصف يأخذ كل المساحة المتبقية بين العنوان والزر */
+}
+
+.find-out-more-btn{
+    align-self: flex-start;
+    margin-top: auto;
+
+}
+
+
